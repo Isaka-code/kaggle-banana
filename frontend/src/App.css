@@ -1,0 +1,188 @@
+.App {
+  text-align: center;
+  min-height: 100vh;
+  color: white;
+}
+
+.App-header {
+  padding: 2rem 0;
+}
+
+.App-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.App-header p {
+  margin: 1rem 0 0 0;
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.App-main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem 2rem;
+}
+
+.upload-section,
+.emoji-section,
+.convert-section,
+.result-section {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 2rem;
+  margin: 2rem 0;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.upload-section h2,
+.emoji-section h2,
+.convert-section h2,
+.result-section h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.file-input {
+  display: none;
+}
+
+.file-label {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #4CAF50;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.file-label:hover {
+  background: #45a049;
+}
+
+.image-preview {
+  margin-top: 1rem;
+}
+
+.image-preview img {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.emoji-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.emoji-button {
+  font-size: 3rem;
+  padding: 1rem;
+  border: 3px solid transparent;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.emoji-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.emoji-button.selected {
+  border-color: #FFD700;
+  background: rgba(255, 215, 0, 0.2);
+  transform: scale(1.1);
+}
+
+.convert-button {
+  font-size: 1.2rem;
+  padding: 15px 30px;
+  background: linear-gradient(45deg, #FF6B6B, #4ECDC4);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.convert-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.convert-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.result-container {
+  text-align: center;
+}
+
+.image-comparison {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.image-container {
+  text-align: center;
+}
+
+.image-container h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.image-container img {
+  max-width: 250px;
+  max-height: 250px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.download-button {
+  font-size: 1.1rem;
+  padding: 12px 24px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 1rem;
+}
+
+.download-button:hover {
+  background: #45a049;
+}
+
+@media (max-width: 768px) {
+  .App-main {
+    padding: 0 1rem 1rem;
+  }
+  
+  .emoji-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .image-comparison {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}
